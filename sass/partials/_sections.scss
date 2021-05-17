@@ -1,0 +1,99 @@
+.mainContentArea {
+    position: relative;
+    width: 100%;
+    padding-top: $header_height;
+    background-color: white;
+    height: 100%;
+
+    &.is_active {
+        overflow: hidden
+    }
+
+    &::before {
+        /* never visible - used to check MQ in jQuery */
+        display: none;
+        content: 'mobile';
+    }
+    @include MQ(M) {
+        padding-top: $header_height_l;
+        &::before {
+            /* never visible - used to check MQ in jQuery */
+            content: 'tablet';
+        }
+    }
+    @include MQ(L) {
+        margin-top: 0;
+        &::before {
+            /* never visible - used to check MQ in jQuery */
+            content: 'desktop';
+        }
+    }
+}
+
+.section_block {
+    padding: 70px 0;
+    display: block;
+    width: 100%;
+    position: relative;
+
+    .container {
+        z-index: 5;
+    }
+}
+
+.fillerImage {
+    width: 100%;
+    max-width: 512px;
+    display: block;
+    margin: auto;
+}
+
+.section_cto {
+    margin-top: 40px;
+    clear: both;
+}
+
+.section_header {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.title {
+    line-height: 1.45;
+    font-size: 14px;
+    @include break-inside(avoid);
+
+    @include MQ(M) {
+        font-size: 18px;
+    }
+}
+
+.title_sm {
+    font-size: 18px;
+    
+    @include MQ(M) {
+        font-size: 24px;
+    }
+}
+
+.title_md {
+    font-size: 21px;
+    
+    @include MQ(M) {
+        font-size: 32px;
+    }
+}
+
+.title_lg {
+    font-size: 32px;
+    
+    @include MQ(M) {
+        font-size: 42px;
+    }
+}
+
+footer[role="contentinfo"] {
+    width: 100%;
+    clear: both;
+}
+

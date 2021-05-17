@@ -1,0 +1,86 @@
+%hero_background {
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    background-position: top right;
+    background-repeat: no-repeat;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 380px;
+
+    @include MQ(M) {
+        min-height: 100%;
+    }
+}
+
+.hero_area {
+    @extend %hero_background;
+    background-color: transparent;
+    
+    .container {
+        z-index: 10;
+    }
+}
+
+.home_hero {
+    background-color: $brand_accent_light;
+    background-image: url(../img/banners/hero_bg.jpg);
+}
+
+.heroContentWrapper {
+    min-height: 65vh;
+    padding: 100px 0 70px;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+
+    // @include MQ(M) {
+    //     padding-bottom: 150px;
+    // }
+}
+
+.hero_title {
+    font-size: 32px;
+    margin-bottom: 15px;
+    @include break-inside(avoid);
+    
+    @include MQ(M) {
+        font-size: 41px;
+    }
+}
+
+.hero_blub {
+    font-weight: 400;
+    font-size: 16px;
+    color: inherit;
+}
+
+.imageItemHolder {
+    padding-bottom:20px;
+
+    img {
+        display: inline-block;
+        max-width: 520px;
+        width: 100%;
+    }
+
+    @include MQ(M) {
+        padding: 0 30px
+    }
+}
+
+.fncyDemacator {
+    @include flexbox();
+    font-size: 16px;
+    color: $brand_black;
+    align-items: center;
+    padding: 30px 0 15px;
+}
+
+.demLine {
+    width: 40px;
+    height: 2px;
+    background-color: $brand_primary;
+    display: inline-flex;
+    margin-right: 15px;
+}

@@ -1,0 +1,64 @@
+.mainLandingPageBg {
+    width: 100%;
+    @extend %hero_background;
+    
+    > * {
+        z-index: 5;
+    }
+
+    @include MQ(M) {
+        min-height: 700px;
+    }
+}
+
+.authFooter {
+    display: block;
+    padding: 30px 0;
+    color: $color_grey_dark;
+
+    @include MQ-MAX(M) {
+        text-align: center;
+        font-size: 14px;
+        line-height: 2;
+    }
+}
+
+.authFtNav {
+    @include flexbox();
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+
+    @include MQ(M) {
+        justify-content: space-between;
+    }
+}
+
+.footer_links {
+    @include flexbox();
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footerLinkWrapper + .footerLinkWrapper {
+    margin-left: 15px;
+}
+
+.footerLinkItem {
+    display: block;
+    color: inherit;
+    text-decoration: underline;
+
+    &:hover, &:focus {
+        color: $brand_accent;
+    }
+}
+
+.authFtSub {
+    
+    @include MQ-MAX(M) {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+}
